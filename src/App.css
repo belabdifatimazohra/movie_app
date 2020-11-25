@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background: #1e2129;
+  color: #8e95a5;
+  width: 100%;
+  height: 100%;
 }
 
 .App-logo {
@@ -35,4 +39,56 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.copyright {
+  width: 100%;
+  background-color: #212529 !important;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.CardDesc {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5px;
+  bottom: 0;
+}
+
+.rate {
+  position: absolute;
+  width: 100%;
+  bottom: 6%;
+  padding: 5px;
+  text-align: start;
+}
+.CardButton {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: start;
+}
+
+.CardButton a {
+  color: #8e95a5;
+}
+
+.redStar {
+  color: red;
+}
+
+.movieList {
+  margin: 50px 0;
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
