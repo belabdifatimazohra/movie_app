@@ -51,11 +51,28 @@
   bottom: 0;
 }
 
+.CardDesc {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5px;
+  bottom: 0;
+}
+
+.rate {
+  position: absolute;
+  width: 100%;
+  bottom: 6%;
+  padding: 5px;
+  text-align: start;
+}
 .CardButton {
   margin: 10px 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: start;
 }
 
 .CardButton a {

@@ -2,8 +2,10 @@ import { React, useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 
-function MovieList() {
+function MovieList({searchMovie}) {
+  // Movie Data state 
   const [movieData, setmovieData] = useState();
+  
 
   // Get the data movie with axios
   const getMovieData = async () => {
@@ -12,9 +14,8 @@ function MovieList() {
     );
     // Update the state of data movie
     setmovieData(response.data);
-    
   };
-  // Load Data movie with component
+  // Load Searched movie with component
   useEffect(() => {
     getMovieData();
   }, []);
@@ -27,12 +28,13 @@ function MovieList() {
             <MovieCard
               title={result.title}
               year={result.release_date.substring(4, 0)}
-              srcImg={`https://image.tmdb.org/t/p/w500/${result.poster_path}`}
+              srcImg={`https://image.tmdb.org/t/p/w200/${result.poster_path}`}
               key={result.id}
             />
           ))}
       </div>
       {console.log(movieData)}
+       {console.log(searchMovie)}
     </div>
   );
 }
