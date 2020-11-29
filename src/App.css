@@ -3,7 +3,7 @@
   background: #1e2129;
   color: #8e95a5;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .App-logo {
@@ -91,4 +91,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+Nav a{
+  color: #17a2b8;
 }

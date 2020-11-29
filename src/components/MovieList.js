@@ -30,10 +30,10 @@ function MovieList() {
               year={result.release_date.substring(4, 0)}
               srcImg={`https://image.tmdb.org/t/p/w200/${result.poster_path}`}
               key={result.id}
+              movie_id = {result.id}
             />
           ))}
       </div>
-      {console.log(movieData)}
     </div>
   );
 }
