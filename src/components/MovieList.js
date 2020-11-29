@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 
-function MovieList({searchMovie}) {
+function MovieList() {
   // Movie Data state 
   const [movieData, setmovieData] = useState();
   
@@ -34,7 +34,6 @@ function MovieList({searchMovie}) {
           ))}
       </div>
       {console.log(movieData)}
-       {console.log(searchMovie)}
     </div>
   );
 }
