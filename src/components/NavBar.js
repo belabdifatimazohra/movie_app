@@ -1,21 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import { Navbar, Nav, FormControl, Form, Button } from "react-bootstrap";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar() {
-      // Search Movie State
+  // Search Movie State
   const [search, setSearch] = useState();
   const [showSearch, setShow] = useState(false);
   //  {showSearch && <Search search = {search} />}
-    return (
-        <div>
-                {/* NavBar App */}
+  return (
+    <div>
+      {/* NavBar App */}
       <Navbar bg="dark" variant="dark" fixed="top">
-        <Navbar.Brand >Movie App</Navbar.Brand>
+        <Navbar.Brand>Movie App</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link> <Link to="/">Home</Link></Nav.Link>
-          <Nav.Link >Movies</Nav.Link>
-          <Nav.Link >Popular</Nav.Link>
+          <Nav.Link>
+            {" "}
+            <Link to="/">Home</Link>
+          </Nav.Link>
+          <Nav.Link>Movies</Nav.Link>
+          <Nav.Link>Popular</Nav.Link>
         </Nav>
         <Form inline>
           <FormControl
@@ -29,8 +32,8 @@ function NavBar() {
           </Button>
         </Form>
       </Navbar>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
