@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  background: #1e2129;
   color: #8e95a5;
+  background: #1e2129;
   width: 100%;
-  height: 100%;
+  background-attachment: scroll;
 }
 
 .App-logo {
@@ -91,4 +91,60 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: #1e2129;
+  width: 100%;
+  background-attachment: scroll;
+}
+
+Nav a,
+Nav a:hover {
+  color: #17a2b8;
+}
+
+.description {
+  margin: 50px 0;
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: scroll;
+}
+
+.detail {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail > div {
+  padding: 20px;
+  flex: 1;
+  text-align: start;
+}
+
+.pagination > button {
+  border: none;
+  color: #1e2129;
+  padding: 10px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  border: 0 #ffffff;
+  outline: none;
+  position: relative;
+  bottom: 70px;
+}
+button:hover {
+  background-color: #99e9f2;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.prevNext {
+  background-color: #17a2b8;
+  color: white;
 }

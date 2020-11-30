@@ -1,22 +1,9 @@
 import React from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card} from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
-export default function MovieCard({ title, year, srcImg }) {
-  const star = (rating) => {
-    let Array = [];
-    for (let i = 1; i <= 5; i++) {
-      while (i < rating) {
-        Array.push(
-          <span key={i} className="redStar">
-            &#x2729;
-          </span>
-        );
-      }
-      Array.push(<span key={i}>&#x2729;</span>);
-    }
-    console.log(Array);
-    return Array;
-  };
+function MovieCard({movie_id, title, year, srcImg }) {
+  const history = useHistory();
   return (
     <div>
       <Card
@@ -27,6 +14,9 @@ export default function MovieCard({ title, year, srcImg }) {
           backgroundColor: "#212529",
           position: "relative",
         }}
+        onClick={() =>
+          history.push(`/movies/${movie_id}`)
+        }
       >
         <Card.Img variant="top" src={srcImg} />
         <div>
@@ -52,3 +42,4 @@ export default function MovieCard({ title, year, srcImg }) {
     </div>
   );
 }
+export default MovieCard
