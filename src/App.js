@@ -7,8 +7,10 @@ import Search from "./components/Search"
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Description from "./components/Description";
+import TopRated from "./components/TopRated"
 
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -22,6 +24,9 @@ function App() {
           </Route>
           <Route path="/search/:search" >
             <Search />
+          </Route>
+          <Route path="/toprated" >
+            <TopRated />
           </Route>
         </Switch>
         <Footer />

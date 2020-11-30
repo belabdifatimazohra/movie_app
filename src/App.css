@@ -106,6 +106,7 @@ Nav a:hover {
   width: 100%;
   min-height: 100vh;
   background-attachment: scroll;
+  background-color: #1e2129;
 }
 
 .detail {
@@ -121,6 +122,11 @@ Nav a:hover {
   text-align: start;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .pagination > button {
   border: none;
   color: #1e2129;

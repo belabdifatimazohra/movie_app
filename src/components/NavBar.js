@@ -6,8 +6,6 @@ import { useHistory } from "react-router-dom";
 function NavBar() {
   // Search Movie State
   const [search, setSearch] = useState();
-  const [showSearch, setShow] = useState(false);
-  //  {showSearch && <Search search = {search} />}
   const history = useHistory();
   return (
     <div>
@@ -19,7 +17,7 @@ function NavBar() {
             <Link to="/">Home</Link>
           </Nav.Link>
           <Nav.Link> <Link to="/">Movies</Link> </Nav.Link>
-          <Nav.Link><Link to="/">Popular </Link></Nav.Link>
+          <Nav.Link><Link to="/toprated">Top Rated </Link></Nav.Link>
         </Nav>
         <Form inline>
           <FormControl
@@ -28,7 +26,7 @@ function NavBar() {
             className="mr-sm-2"
             onChange={(e) => setSearch(e.target.value)}
           />
-          <Button variant="outline-info" onClick={()=> history.push(`/search/${search}`, searchM={search})}>
+          <Button variant="outline-info" onClick={()=> history.push(`/search/${search}`,  {search:search})}>
             Search
           </Button>
         </Form>
