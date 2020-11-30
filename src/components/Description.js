@@ -21,10 +21,9 @@ function Description() {
             `https://api.themoviedb.org/3/movie/${movie_id}?api_key=be346b1af66bf3c4dbe37288ebe7f025&language=en-US`
         );
         setDetails(responseD.data);
-        console.log(details);
     };
     // Upload description before the component load
-    useEffect(() => getDetails());
+    useEffect(() => getDetails(), []);
 
     // Used on youtube display video by movie_id
     const opts = {

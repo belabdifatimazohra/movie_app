@@ -11,7 +11,6 @@ function Search() {
 
     // Use Axios to get movie data with get
     const getMovieSearch = async () => {
-        console.log(search);
         const response = await axios.get(
             `https://api.themoviedb.org/3/search/movie?api_key=be346b1af66bf3c4dbe37288ebe7f025&query=${search}`
         );
