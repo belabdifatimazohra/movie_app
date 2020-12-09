@@ -12,12 +12,12 @@ function NavBar() {
       {/* NavBar App */}
       <Navbar bg="dark" variant="dark" fixed="top">
         <Navbar.Brand>Movie App</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link>
+        <Nav className="mr-auto" style={{display:"flex" , justifyContent:"space-between"}}>
+          <Nav>
             <Link to="/">Home</Link>
-          </Nav.Link>
-          <Nav.Link> <Link to="/">Movies</Link> </Nav.Link>
-          <Nav.Link><Link to="/toprated">Top Rated </Link></Nav.Link>
+          </Nav>
+          <Nav> <Link to="/">Movies</Link> </Nav>
+          <Nav><Link to="/toprated">Top Rated </Link></Nav>
         </Nav>
         <Form inline>
           <FormControl
