@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import axios from 'axios';
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 function Search() {
     // Movie search state 
     const [movieFilter, setmovieFilter] = useState([]);
@@ -30,7 +30,8 @@ function Search() {
             <div className="movieList">
                 {movieFilter &&
                 movieFilter.map(movie =>
-                        <MovieCard
+                    <MovieCard
+                            movie_id = {movie.id}
                             title={movie.title}
                             year={movie.release_date.substring(4, 0)}
                             srcImg={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
