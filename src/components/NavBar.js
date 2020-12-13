@@ -8,29 +8,71 @@ function NavBar() {
   const [search, setSearch] = useState();
   const history = useHistory();
   return (
-    <div>
+    <div className="header">
       {/* NavBar App */}
-      <Navbar bg="dark" variant="dark" fixed="top">
+      {/* <Navbar  bg="dark" variant="dark" fixed="top">
         <Navbar.Brand>Movie App</Navbar.Brand>
-        <Nav className="mr-auto" style={{display:"flex" , justifyContent:"space-between"}}>
-          <Nav>
-            <Link to="/">Home</Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav
+            className="mr-auto"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <Nav>
+              <Link to="/">Home</Link>
+            </Nav>
+            <Nav>
+              {" "}
+              <Link to="/">Movies</Link>{" "}
+            </Nav>
+            <Nav>
+              <Link to="/toprated">Top Rated </Link>
+            </Nav>
           </Nav>
-          <Nav> <Link to="/">Movies</Link> </Nav>
-          <Nav><Link to="/toprated">Top Rated </Link></Nav>
-        </Nav>
-        <Form inline>
-          <FormControl
-            type="text"
-            placeholder="Search"
-            className="mr-sm-2"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <Button variant="outline-info" onClick={()=> history.push(`/search/${search}`,  {search:search})}>
-            Search
-          </Button>
-        </Form>
-      </Navbar>
+          <Form inline>
+            <FormControl
+              type="text"
+              placeholder="Search"
+              className="mr-sm-2"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <Button
+              variant="outline-info"
+              onClick={() =>
+                history.push(`/search/${search}`, { search: search })
+              }
+            >
+              Search
+            </Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar> */}
+
+      <Navbar bg="light" expand="lg">
+  <Navbar.Brand > Movie App </Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+              <Nav
+            className="mr-auto"
+            style={{ display: "flex", justifyContent: "space-between" }}
+          >
+            <Nav>
+              <Link to="/">Home</Link>
+            </Nav>
+            <Nav>
+              {" "}
+              <Link to="/">Movies</Link>{" "}
+            </Nav>
+            <Nav>
+              <Link to="/toprated">Top Rated </Link>
+            </Nav>
+          </Nav>
+    <Form inline>
+      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <Button variant="outline-success">Search</Button>
+    </Form>
+  </Navbar.Collapse>
+</Navbar>
     </div>
   );
 }
