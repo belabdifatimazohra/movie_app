@@ -15,11 +15,11 @@ function MovieCard({movie_id, title, year, srcImg }) {
           backgroundColor: "#212529",
           position: "relative",
         }}
-        onClick={() =>
-          history.push(`/movies/${movie_id}`)
-        }
+      
       >
-        <Card.Img variant="top" src={srcImg} />
+        <Card.Img variant="top" src={srcImg}   onClick={() =>
+          history.push(`/movies/${movie_id}`)
+        }/>
         <div>
           <div className="CardButton">
             <h5> {title}</h5>
@@ -37,8 +37,12 @@ function MovieCard({movie_id, title, year, srcImg }) {
           <Rating />
         </div>
         <div className="CardDesc">
-          <span style={{ textAlign: "start" }}>Read More</span>
-          <span style={{ textAlign: "end" }}>TRAILER</span>
+          <span style={{ textAlign: "start" }}   onClick={() =>
+          history.push(`/movies/${movie_id}`)
+        }>Read More</span>
+          <span style={{ textAlign: "end" }}  onClick={() =>
+          history.push(`/movies/${movie_id}`)
+        }>TRAILER</span>
         </div>
       </Card>
     </div>

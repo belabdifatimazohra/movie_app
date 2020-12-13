@@ -13,7 +13,8 @@ export default function SimpleRating() {
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
-          }}
+                  }}
+                  onClick={(e) => setValue(value)}
         />
       </Box>
   
