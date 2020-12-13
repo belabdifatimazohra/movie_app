@@ -25,7 +25,7 @@ function MovieCard({movie_id, title, year, srcImg }) {
         }/>
         <div>
           <div className="CardButton">
-            <h5> {title}</h5>
+            <h5 className="truncate"> {title}</h5>
           </div>
           <div className="CardButton">
             <h6>{year}</h6>
@@ -39,8 +39,7 @@ function MovieCard({movie_id, title, year, srcImg }) {
           onChange={(event, newValue) => {
             setValue(newValue);
               }}
-                  
-        />
+                          />
       </Box>
         </div>
         <div className="CardDesc">
