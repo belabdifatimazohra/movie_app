@@ -1,6 +1,7 @@
 import React from "react";
 import { Card} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import Rating from "./Rating"
 
 function MovieCard({movie_id, title, year, srcImg }) {
   const history = useHistory();
@@ -28,11 +29,12 @@ function MovieCard({movie_id, title, year, srcImg }) {
           </div>
         </div>
         <div className="rate">
+          {/* <span>&#x2729;</span>
           <span>&#x2729;</span>
           <span>&#x2729;</span>
           <span>&#x2729;</span>
-          <span>&#x2729;</span>
-          <span>&#x2729;</span>
+          <span>&#x2729;</span> */}
+          <Rating />
         </div>
         <div className="CardDesc">
           <span style={{ textAlign: "start" }}>Read More</span>
