@@ -1,10 +1,13 @@
 import React from "react";
 import { Card} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import Rating from "./Rating"
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 
 function MovieCard({movie_id, title, year, srcImg }) {
   const history = useHistory();
+  const [value, setValue] = React.useState(0);
+
   return (
     <div>
       <Card
@@ -29,12 +32,16 @@ function MovieCard({movie_id, title, year, srcImg }) {
           </div>
         </div>
         <div className="rate">
-          {/* <span>&#x2729;</span>
-          <span>&#x2729;</span>
-          <span>&#x2729;</span>
-          <span>&#x2729;</span>
-          <span>&#x2729;</span> */}
-          <Rating />
+         <Box component="fieldset" mb={3} borderColor="transparent">
+        <Rating
+          name={movie_id}
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+              }}
+                  
+        />
+      </Box>
         </div>
         <div className="CardDesc">
           <span style={{ textAlign: "start" }}   onClick={() =>
