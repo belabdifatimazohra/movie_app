@@ -8,10 +8,12 @@ function TopRated() {
   // Movie Data state
   const [page, setPage] = useState(1);
 
+  const { REACT_APP_API_KEY } = process.env;
+
   // Get the data movie with axios
   const getMovieData = async () => {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/movie/top_rated?api_key=be346b1af66bf3c4dbe37288ebe7f025&language=en-US&page=${page}`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${REACT_APP_API_KEY}&language=en-US&page=${page}`
     );
     // Update the state of data movie
     setmovieData(response.data);
@@ -37,29 +39,29 @@ function TopRated() {
       </div>
       <div className="pagination">
         {/* First page */}
-        <button className="prevNext" onClick={() =>  setPage(1)}>
+        <button className="prevNext" onClick={() => setPage(1)}>
           &laquo;
         </button>
-        <button style={{backgroundColor:"#3bc9db"}}onClick={()=> page>1 ? setPage(page-1): page}>
+        <button style={{ backgroundColor: "#3bc9db" }} onClick={() => page > 1 ? setPage(page - 1) : page}>
           &#8249;
         </button>
-        <button onClick={() =>  setPage(1)}>
+        <button onClick={() => setPage(1)}>
           1
         </button>
-        <button onClick={()=>setPage(2)}>
+        <button onClick={() => setPage(2)}>
           2
         </button>
         <button >
           ...
         </button>
-         <button onClick={()=>setPage(12)} >
+        <button onClick={() => setPage(12)} >
           12
         </button>
-        <button style={{backgroundColor:"#3bc9db"}} onClick={()=> page<400 ? setPage(page+1): page}>
+        <button style={{ backgroundColor: "#3bc9db" }} onClick={() => page < 400 ? setPage(page + 1) : page}>
           &#8250;
         </button>
-            {/* Last page */}
-         <button className="prevNext" onClick={() =>  setPage(500)}>
+        {/* Last page */}
+        <button className="prevNext" onClick={() => setPage(500)}>
           &raquo;
         </button>
       </div>

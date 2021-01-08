@@ -7,37 +7,38 @@ function NavBar() {
   const [search, setSearch] = useState();
   const history = useHistory();
 
+
   return (
     <div>
-   
-      <Navbar bg="dark" variant="dark" fixed="top"  expand="lg">
-        <Navbar.Brand style={{color:"#17a2b8"}}><Link to="/">Movie App</Link></Navbar.Brand>
+
+      <Navbar bg="dark" variant="dark" fixed="top" expand="lg">
+        <Navbar.Brand style={{ color: "#17a2b8" }}><Link to="/">Movie App</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav> <Link to="/">Home</Link></Nav>
-               <Nav>
+            <Nav>
               <Link to="/">Movies</Link>
             </Nav>
             <Nav>
               <Link to="/toprated">Top Rated </Link>
             </Nav>
           </Nav>
-           <Form inline>
-          <FormControl
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <Button
-            variant="outline-info"
-            onClick={() =>
-              history.push(`/search/${search}`, { search: search })
-            }
-          >
-            Search
+          <Form inline>
+            <FormControl
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <Button
+              variant="outline-info"
+              onClick={() =>
+                history.push(`/search/${search}`, { search: search })
+              }
+            >
+              Search
           </Button>
-        </Form>
+          </Form>
         </Navbar.Collapse>
       </Navbar>
     </div>
