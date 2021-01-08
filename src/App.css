@@ -6,9 +6,6 @@
   background-attachment: scroll;
 }
 
-@media screen and (max-width: 600px) {
-}
-
 .copyright {
   width: 100%;
   background-color: #212529 !important;
@@ -24,20 +21,22 @@
   width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
-  padding: 5px;
+  padding: 7px;
   bottom: 0;
+  cursor: pointer;
 }
 
 .rate {
   position: absolute;
   width: 100%;
-  bottom: 6%;
+  bottom: 3%;
   padding: 5px;
   text-align: start;
 }
 .CardButton {
   margin: 10px 5px;
   display: flex;
+  padding: 5px;
   flex-direction: row;
   justify-content: space-between;
   text-align: start;
@@ -47,17 +46,14 @@
   color: #8e95a5;
 }
 
-.redStar {
-  color: #17a2b8;
-}
-
 .movieList {
   margin: 50px 0;
+  padding: 50px;
   max-width: 100%;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #1e2129;
   width: 100%;
@@ -76,19 +72,31 @@ Nav a:hover {
   min-height: 100vh;
   background-attachment: scroll;
   background-color: #1e2129;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .detail {
   margin: 30px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .detail > div {
   padding: 20px;
-  flex: 1;
+  /* flex: 1; */
+  width: 100%;
   text-align: start;
+}
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pagination {
@@ -127,4 +135,6 @@ button:hover {
 a {
   margin: 10px 15px;
 }
-
+.navbar {
+  align-content: center;
+}
